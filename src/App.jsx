@@ -1,4 +1,4 @@
-import React , {useState} from 'react';
+import {useState} from 'react';
 import Navbar from './components/Navbar';
 import Amazon from './components/Amazon';
 import Cart from './components/Cart';
@@ -40,7 +40,7 @@ const App = () => {
 	}
 
   return (
-	<React.Fragment>
+	<>
 		<Navbar size={cart.length} setShow={setShow} />
 		{
 			show ? <Amazon handleClick={handleClick} /> : <Cart cart={cart} setCart={setCart} handleChange={handleChange} />
@@ -48,7 +48,7 @@ const App = () => {
 		{
 			warning && <div className='warning'>Item is already added to your cart</div>
 		}
-	</React.Fragment>
+	</>
   )
 }
 
